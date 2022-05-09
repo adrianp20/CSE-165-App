@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">#centralwidget {
+color: rgb(112, 112, 112);
+}</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QFrame" name="ContentFrame">
+      <property name="styleSheet">
+       <string notr="true">#ContentFrame{
+
+width: 546px;
+height: 894px;
+left: -86px;
+top: -52px;
+background: #EDEDED;
+/*
+background:   qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(255, 189, 124), stop:1 rrgb(0, 0, 0))
+*/
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QFrame" name="AddToDoList">
+         <property name="styleSheet">
+          <string notr="true">#ToDoAppsClass #AddToDoList {
+border: 0;
+background-color: 1px solid qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #1eacfa, stop: 0.5 #71889c, stop: 1.0 #1eacfa);;
+
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QFrame" name="AddLeft">
+            <property name="styleSheet">
+             <string notr="true">#AddLeft {
+border: 0;
+}</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <item>
+              <widget class="QFrame" name="TitleBarFrame">
+               <property name="styleSheet">
+                <string notr="true">#TitleBarFrame {
+border: 0;
+/*
+background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(255, 189, 124), stop:1 rrgb(0, 0, 0));
+*/
+background: #EDEDED;
+border-radius: 10px;
+
+
+}
+</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout">
+                <item>
+                 <widget class="QPushButton" name="backBtn">
+                  <property name="styleSheet">
+                   <string notr="true">#backBtn{
+width: 30px;
+height: 30px;
+border-radius: 10px;
+border: 3px;
+
+
+border-style: outset;
+
+background-color: #C4C4C4;
+
+color: black;
+font: 15pt &quot;Verdana&quot;;
+}
+
+#backBtn::disabled {
+background-color: #aaaaaa;
+border-color: #aaaaaa;
+color: #aaaaaa;
+}
+
+#backBtn:hover {
+background-color: blue;
+border-color: blue;
+color: white;
+}
+
+#backBtn:pressed {
+background-color: #aaaaaa;
+}
+
+#backBtn:checked {
+background-color: #1eacfa;
+border-color: #16587d;
+}
+</string>
+                  </property>
+                  <property name="text">
+                   <string>&lt;-</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>121</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label">
+                  <property name="styleSheet">
+                   <string notr="true">#label {
+position: absolute;
+width: 330px;
+height: 121px;
+left: 30px;
+top: 143px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 140%;
+/* or 45px */
+
+
+color: #000000;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>To Do List</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_2">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>307</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="NewTaskText">
+               <property name="styleSheet">
+                <string notr="true">#NewTaskText {
+
+color: black;
+border: 1px;
+border-radius: 20px;
+border-color: white;
+}</string>
+               </property>
+               <property name="text">
+                <string>Add New Task</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="NewTaskLineEdit">
+               <property name="styleSheet">
+                <string notr="true">#NewTaskLineEdit {
+/*
+background: #C4C4C4;
+*/
+background: #C4C4C4;
+color: black;
+border-color: black;
+border-top: 5px;
+border-botom: 5px;
+
+font-family: &quot;Inter&quot;;
+font-style: normal;
+font-weight: 300;
+font-size: 14px;
+}</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="NewDateText">
+               <property name="styleSheet">
+                <string notr="true">#NewDateText {
+color: black;
+}</string>
+               </property>
+               <property name="text">
+                <string>Date Created</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDateTimeEdit" name="dateTimeEdit">
+               <property name="styleSheet">
+                <string notr="true">#dateTimeEdit {
+/*
+background:   qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(255, 189, 124), stop:1 rrgb(0, 0, 0));
+*/
+background: #C4C4C4;
+color: black;
+font: 15pt;
+
+border-color: black;
+}
+
+</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="AddRight">
+            <property name="styleSheet">
+             <string notr="true">#AddRight {
+border: 0;
+}</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <item>
+              <widget class="QPushButton" name="AddNewBtn">
+               <property name="styleSheet">
+                <string notr="true">#AddNewBtn{
+width: 60px;
+height: 60px;
+border-radius: 10px;
+border: 3px;
+/*
+border-color: rgb(255, 255, 255);
+*/
+border-style: outset;
+
+/*
+background-color: #C4C4C4;
+
+background-color: rgba(255, 255, 255, 0);
+*/
+background-color: #C4C4C4;
+color: black;
+font: 20pt &quot;Verdana&quot;;
+}
+
+#AddNewBtn::disabled {
+background-color: rgb(170, 30, 48);
+border-color: rgb(255, 242, 28);
+color: rgb(255, 46, 48);
+}
+
+#AddNewBtn:hover {
+background-color: green;
+border-color: green;
+color: white;
+}
+
+#AddNewBtn:pressed {
+background-color: #aaaaaa;
+}
+
+#AddNewBtn:checked {
+background-color: #1eacfa;
+border-color: #16587d;
+}
+</string>
+               </property>
+               <property name="text">
+                <string>Add</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QScrollArea" name="AllNewTasks">
+         <property name="styleSheet">
+          <string notr="true">#AllNewTasks {
+border: 0;
+}</string>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="AllNewTasksContents">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>762</width>
+            <height>340</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item>
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>319</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
